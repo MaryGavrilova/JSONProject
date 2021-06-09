@@ -184,8 +184,8 @@ public class Main {
         return list;
     }
 
-    public static void readXML(List<Employee> list, Node node) {
-        NodeList nodeList = node.getChildNodes();
+    public static void readXML(List<Employee> list, Node root) {
+        NodeList nodeList = root.getFirstChild().getChildNodes();
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node currentNode = nodeList.item(i);
             if (Node.ELEMENT_NODE == currentNode.getNodeType()) {
